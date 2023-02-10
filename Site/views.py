@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from josie.settings import SITE_NAME
 
-# Create your views here.
+def index(request):
+    ctx = {}
+    ctx['page_title'] = 'Welcome | Josie'
+    return render(request, 'Site/index.html', context=ctx)

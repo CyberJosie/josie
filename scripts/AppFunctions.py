@@ -9,6 +9,9 @@ import time
 import json
 from typing import Union
 
+
+
+
 def read_key(keydir: str, name: str) -> Union[str,None]:
     """
     Reads a secure string from a file.

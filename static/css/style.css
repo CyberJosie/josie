@@ -1,0 +1,82 @@
+
+@font-face {
+    font-family: 'palanquin';
+    src: url('/static/fonts/palanquin-regular.ttf');
+}
+:root {
+    --dark-0: #121212;
+    --dark-1: #181818;
+    --dark-2: #282828;
+    --dark-3: #404040;
+
+    --purple-0: #702963;
+    --purple-1: #9F2B68;
+    --purple-2: #AA336A;
+    --lwhite: #b3b3b3;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: var(--dark-0);
+}
+
+h1 {
+    font-family: 'palanquin';
+    font-size: 48px;
+    color: var(--purple-0);
+}
+h2 {
+    font-family: 'palanquin';
+    font-size: 42px;
+}
+h3 {
+    font-family: 'palanquin';
+    font-size: 36px;
+}
+h4 {
+    font-family: 'palanquin';
+    font-size: 32px;
+}
+h5 {
+    font-family: 'palanquin';
+    font-size: 28px;
+}
+p {
+    font-family: 'palanquin';
+    font-size: 20px;
+}
+
+/* Wraps the whole page */
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/*
+ Wraps just the page content
+ Do not put anything below here besides the footer.
+*/
+.content-area-wrap {
+    padding-bottom: 40px;
+}
+.content-area {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.secondary {
+    color: var(--lwhite);
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
