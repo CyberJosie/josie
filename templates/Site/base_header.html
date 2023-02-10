@@ -1,0 +1,50 @@
+{% load static %}
+<div class="header-top"></div>
+<div class="header">
+    <div class="header-bar">
+        <div class="menu-collapsible-btn" onclick="toggle_menu()">
+            <img src="{% static 'images/menu_icon.png' %}">
+        </div>
+
+        <div class="header-bar-btn-wrap">
+            <a href="/">
+                <div class="header-bar-btn" style="padding-top: 10px;">
+                    <img src="{% static 'images/techjosie_icon.png' %}" width="35px">
+                </div>
+            </a>
+        </div>
+
+        <div class="header-bar-btn-wrap noshow" title="Home">
+            <a href="">
+                <div class="header-bar-btn">
+                    <span>Home</span>
+                </div>
+            </a>
+        </div>
+        <div class="header-bar-btn-wrap noshow" title="Services">
+            <a href="">
+                <div class="header-bar-btn">
+                    <span>Services</span>
+                </div>
+            </a>
+        </div>
+        <div class="header-bar-btn-wrap noshow" title="Projects">
+            <a href="">
+                <div class="header-bar-btn">
+                    <span>Projects</span>
+                </div>
+            </a>
+        </div>
+        <div class="header-bar-btn-wrap noshow" title="Contact">
+            <a href="">
+                <div class="header-bar-btn">
+                    <span>Contact</span>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+</div>
+<div class="dropdown-menu collap-content" id="dropdown-menu">
+</div>

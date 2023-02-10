@@ -1,8 +1,8 @@
-
 @font-face {
     font-family: 'palanquin';
     src: url('/static/fonts/palanquin-regular.ttf');
 }
+
 :root {
     --dark-0: #121212;
     --dark-1: #181818;
@@ -15,7 +15,8 @@
     --lwhite: #b3b3b3;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     border: 0;
@@ -27,22 +28,27 @@ h1 {
     font-size: 48px;
     color: var(--purple-0);
 }
+
 h2 {
     font-family: 'palanquin';
     font-size: 42px;
 }
+
 h3 {
     font-family: 'palanquin';
     font-size: 36px;
 }
+
 h4 {
     font-family: 'palanquin';
     font-size: 32px;
 }
+
 h5 {
     font-family: 'palanquin';
     font-size: 28px;
 }
+
 p {
     font-family: 'palanquin';
     font-size: 20px;
@@ -61,10 +67,82 @@ p {
 .content-area-wrap {
     padding-bottom: 40px;
 }
+
 .content-area {
     padding-left: 40px;
     padding-right: 40px;
 }
+
+.header {
+    top: 0;
+    width: 100%;
+    height: 60px;
+    box-shadow: inset 1px 6px 9px -6px;
+}
+
+.header-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.menu-collapsible-btn {
+    height: 60px;
+    width: 60px;
+    padding-right: 20px;
+}
+
+.menu-collapsible-btn img {
+    padding: 10px;
+    height: 30px;
+}
+
+.collapsible {
+    outline: none;
+}
+
+.collap-content {
+    display: none;
+    overflow: hidden;
+}
+
+.header-bar-btn-wrap {
+    padding-right: 40px;
+
+}
+
+.header-bar-btn-wrap a {
+    text-decoration: none;
+}
+
+.header-bar-btn {
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.header-bar-btn span {
+    text-align: center;
+    font-family: 'palanquin';
+    color: white;
+    font-size: 22px;
+}
+
+.header-bar-btn:hover span {
+    color: var(--lwhite);
+}
+
+.header-bar-btn:active span {
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    min-height: 250px;
+    background-color: var(--dark-1);
+}
+
 
 .footer {
     position: absolute;
@@ -77,6 +155,13 @@ p {
     color: var(--lwhite);
 }
 
-@media only screen and (min-width: 1024px) {
+.noshow {
+    display: none;
+}
 
+
+@media only screen and (min-width: 1024px) {
+    .header-bar-btn-wrap {
+        display: block;
+    }
 }
