@@ -15,11 +15,23 @@
         <!-- Site Header -->
         {% include 'Site/base_header.html' %}
 
-        <!-- Page Content -->
+        <!-- Page Body -->
         <div class="content-area-wrap">
             <div class="content-area">
-                {% block content %}
-                {% endblock %}
+
+                <!--Page Content -->
+                <div class="page-content-wrap">
+                    <div class="page-content">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    {% include 'Site/base_sidebar.html' %}
+                </div>
+                
             </div>
         </div>
 
