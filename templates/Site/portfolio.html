@@ -21,13 +21,21 @@
 <p>
     If you need more information than what is available here you can request access to an extended version of my
     portfolio
-    via submitting a request online. To request access, use <a>this page</a>. To redeem access and view my extended
-    portfolio, which is done by entering
-    a unique access code, <a>click here</a>.
+    via submitting a request online. To request access, use <a>this page</a>. Sections with partially witheld information
+    have and 'eyeball' icon next to their heading which you can click to display the extended version. If your access was not already
+    redeemed you will be prompted for an access code first.
 </p>
 
+
 <div class="spacer" id="introduction"></div>
-<h1>Introduction</h1>
+<h1>
+    Introduction
+    {%  if not extended_version %}
+    <span style="padding-left: 1rem;" onclick="redeem_access()">
+        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="30px">
+    </span>
+    {% endif %}
+</h1>
 <p>
 
     My name is Jocelyn, or Josie, and I am an information technology professional and freelance Python
@@ -44,13 +52,27 @@
     individuals in my community.
 </p>
 <div class="spacer" id="experience"></div>
-<h1>Experience</h1>
+<h1>
+    Experience
+    {%  if not extended_version %}
+    <span style="padding-left: 1rem;" onclick="redeem_access()">
+        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="30px">
+    </span>
+    {% endif %}
+</h1>
 <p>
     No content yet.
 </p>
 
 <div class="spacer" id="education"></div>
-<h1>Education</h1>
+<h1>
+    Education
+    {%  if not extended_version %}
+    <span style="padding-left: 1rem;" onclick="redeem_access()">
+        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="30px">
+    </span>
+    {% endif %}
+</h1>
 <p>
     No content yet.
 </p>
@@ -69,7 +91,14 @@
 
 
 <div class="spacer" id="project-showcase"></div>
-<h1>Project Showcase</h1>
+<h1>
+    Project Showcase
+    {%  if not extended_version %}
+    <span style="padding-left: 1rem;" onclick="redeem_access()">
+        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="30px">
+    </span>
+    {% endif %}
+</h1>
 <p>
     No content yet.
 </p>
