@@ -148,6 +148,10 @@ button {
     width: 100vw;
 }
 
+.left-sidebar {
+    display: none;
+}
+
 .header {
     top: 0;
     width: 100%;
@@ -220,8 +224,8 @@ button {
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 4px;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 15%, rgba(0,0,0,0.5) 84%); 
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0.8) 84%);
     z-index: 10;
     position: fixed;
     width: 100%;
@@ -369,5 +373,24 @@ footer>* {
 
     .sidebar {
         flex: 1;
+
+    }
+
+}
+
+@media only screen and (min-width: 1500px) {
+    .page-content-wrap {
+        flex: 1;
+    }
+
+    .sidebar {
+        all: unset;
+        width: 20vw;
+    }
+
+    .left-sidebar {
+        display: block;
+        width: 20vw;
+        padding-right: 40px;
     }
 }
