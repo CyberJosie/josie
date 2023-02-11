@@ -2,6 +2,12 @@
 {% load static %}
 {% block content %}
 
+<div class="portfolio-nav-btn" onclick="toggle_learn_menu()">
+    <img src="{% static 'images/briefcase_icon.png' %}">
+</div>
+
+
+
 <head>
     <title>
         {{page_title}}
@@ -13,10 +19,8 @@
 <p>
     Thanks for taking some time to view my portfolio. This page acts as an online resume for myself and includes my
     background and professional experience. If you are viewing from a desktop device or large tablet you can jump to
-    specific
-    sections of my portfolio by clicking the 'Portfolio' menu button and selecting it from the dropdown. For mobile
-    users the
-    dropdown button has been relocated to the bottom-right of your display.
+    specific sections of my portfolio by clicking the 'Portfolio' menu button and selecting it from the dropdown. For mobile users,
+    click the briefcase button at the bottom right of your display instead.
 </p>
 <p>
     If you need more information than what is available here you can request access to an extended version of my
@@ -32,7 +36,7 @@
     Introduction
     {%  if not extended_version %}
     <span style="padding-left: 1rem;" onclick="redeem_access()">
-        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="30px">
+        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="20px">
     </span>
     {% endif %}
 </h1>
@@ -56,7 +60,7 @@
     Experience
     {%  if not extended_version %}
     <span style="padding-left: 1rem;" onclick="redeem_access()">
-        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="30px">
+        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="20px">
     </span>
     {% endif %}
 </h1>
@@ -69,7 +73,7 @@
     Education
     {%  if not extended_version %}
     <span style="padding-left: 1rem;" onclick="redeem_access()">
-        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="30px">
+        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="20px">
     </span>
     {% endif %}
 </h1>
@@ -95,7 +99,7 @@
     Project Showcase
     {%  if not extended_version %}
     <span style="padding-left: 1rem;" onclick="redeem_access()">
-        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="30px">
+        <img src="{% static 'images/secondary_invisible_icon.png' %}" height="20px">
     </span>
     {% endif %}
 </h1>

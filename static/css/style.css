@@ -357,6 +357,60 @@ footer>* {
     font-family: 'palanquin-bold';
 }
 
+.to-top {
+    border: none;
+    display: block;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 99;
+    height: 40px;
+    cursor: pointer;
+    width: 40px;
+    background-color: rgba(45, 75, 163, 0.4);
+}
+.to-top:hover {
+    background-color: rgba(45, 75, 163, 0.8);
+}
+.to-top:active {
+    background-color: var(--blue-1);
+    transition: 0.1s ease-out;
+    transform: translateY(6px);
+}
+.to-top img {
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.portfolio-nav-btn {
+    border: none;
+    display: block;
+    position: fixed;
+    bottom: 72px;
+    right: 16px;
+    z-index: 99;
+    height: 40px;
+    cursor: pointer;
+    width: 40px;
+    background-color: rgba(45, 75, 163, 0.4);
+}
+.portfolio-nav-btn:hover {
+    background-color: rgba(45, 75, 163, 0.8);
+}
+.portfolio-nav-btn:active {
+    background-color: var(--blue-1);
+    transition: 0.1s ease-out;
+    transform: translateY(6px);
+}
+.portfolio-nav-btn img {
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
 @media only screen and (min-width: 1024px) {
     .header-bar-btn-wrap {
         display: block;
@@ -374,6 +428,9 @@ footer>* {
     .sidebar {
         flex: 1;
 
+    }
+    .portfolio-nav-btn {
+        display: none;
     }
 
 }

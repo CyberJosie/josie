@@ -31,5 +31,5 @@ def make_datetime(timezone: str) -> tuple:
     date = ''
     rn_zoned = rn.astimezone(pytz.timezone(timezone))
     date = rn_zoned.strftime('%A, %-d, %Y')
-    time = rn_zoned.strftime('%-H:%M %p')
+    time = rn_zoned.strftime('%-I:%M %p')
     return date, time
