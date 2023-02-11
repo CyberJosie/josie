@@ -13,6 +13,14 @@
                 </div>
             </a>
         </div>
+        <div class="header-bar-btn-wrap noshow" title="Home">
+            <a href="/">
+                <div class="header-bar-btn">
+                    <span>Home</span>
+                </div>
+            </a>
+            
+        </div>
 
         <!-- Information about me, my experience, and background/history -->
         <div class="header-bar-btn-wrap noshow" title="Portfolio" onclick="toggle_learn_menu()">
@@ -149,13 +157,13 @@
     <h2>Services</h2>
     <div class="menu-ctgs">
         <div class="menu-ctg-wrap">
-            <div class="menu-link">
+            <div class="menu-link" onclick="close_services_menu()"> 
                 <a href="{% url 'services' %}" title="Browse All">Browse All</a>
             </div>
-            <div class="menu-link">
+            <div class="menu-link" onclick="close_services_menu()">
                 <a href="/services/#web-development" title="Web Development">Web Development</a>
             </div>
-            <div class="menu-link">
+            <div class="menu-link" onclick="close_services_menu()">
                 <a href="/services/#python-scripting" title="Python Scripting">Python Scripting</a>
             </div>
         </div>
