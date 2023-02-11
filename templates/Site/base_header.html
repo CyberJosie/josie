@@ -114,24 +114,26 @@
     <div class="menu-ctgs">
         <div class="menu-ctg-wrap">
             <div class="menu-link">
-                <a href="" title="Overview">Overview</a>
+                <a href="{% url 'portfolio' %}" title="Overview">Overview</a>
             </div>
             <div class="menu-link">
-                <a href="" title="Introduction">Introduction</a>
+                <a href="/portfolio/#introduction" title="Introduction">Introduction</a>
             </div>
             <div class="menu-link">
-                <a href="" title="Experience">Experience</a>
+                <a href="/portfolio/#experience" title="Experience">Experience</a>
             </div>
             <div class="menu-link">
-                <a href="" title="Education">Education</a>
+                <a href="/portfolio/#education" title="Education">Education</a>
             </div>
             <div class="menu-link">
-                <a href="" title="Skills">Skills</a>
+                <a href="/portfolio/#skills" title="Skills">Skills</a>
             </div>
             <div class="menu-link">
-                <a href="" title="Technologies">Technologies</a>
+                <a href="/portfolio/#technologies" title="Technologies">Technologies</a>
             </div>
-            
+            <div class="menu-link">
+                <a href="/portfolio/#project-showcase" title="Project Showcase">Project Showcase</a>
+            </div>
         </div>
 
         <div class="menu-ctg-wrap">
@@ -154,6 +156,17 @@
 <div class="dropdown-menu collap-content" id="services-dropdown-menu">
     <h2>Services</h2>
     <div class="menu-ctgs">
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="{% url 'services' %}" title="Browse All">Browse All</a>
+            </div>
+            <div class="menu-link">
+                <a href="/services/#web-development" title="Web Development">Web Development</a>
+            </div>
+            <div class="menu-link">
+                <a href="/services/#python-scripting" title="Python Scripting">Python Scripting</a>
+            </div>
+        </div>
     </div>
 </div>
 <div class="dropdown-menu collap-content" id="blog-dropdown-menu">

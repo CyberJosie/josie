@@ -215,6 +215,7 @@ button {
     color: var(--blue-1);
 }
 
+
 .dropdown-menu {
     padding-left: 8px;
     padding-right: 8px;
@@ -335,6 +336,21 @@ footer>* {
 
 .block-padding {
     padding: 10px;
+}
+
+.heading-parallax {
+    background-image: url("/static/images/abstract_blue_1.jpg");
+    min-height: 100px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.heading-parallax h1 {
+    color: white;
+    font-family: 'palanquin-bold';
 }
 
 @media only screen and (min-width: 1024px) {
