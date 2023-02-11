@@ -8,4 +8,5 @@ urlpatterns = [
     path('portfolio/', views.portfolio, name='portfolio'),
     path('about-me/', views.about_me, name='about_me'),
     path('contact/', views.contact, name='contact'),
+    path('set-timezone/', views.set_timezone, name='set_timezone'),
 ]

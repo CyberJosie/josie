@@ -7,9 +7,9 @@ import os
 import sys
 import time
 import json
+import pytz
 from typing import Union
-
-
+from datetime import datetime
 
 
 def read_key(keydir: str, name: str) -> Union[str,None]:
@@ -24,3 +24,12 @@ def read_key(keydir: str, name: str) -> Union[str,None]:
     except Exception as e:
         print('Failed to read key {} from {}: {}'.format(name, keyfile, str(e)))
     return value
+
+def make_datetime(timezone: str) -> tuple:
+    rn =  datetime.utcnow().replace(tzinfo=pytz.utc)
+    time = ''
+    date = ''
+    rn_zoned = rn.astimezone(pytz.timezone(timezone))
+    date = rn_zoned.strftime('%A, %-d, %Y')
+    time = rn_zoned.strftime('%-H:%M %p')
+    return date, time

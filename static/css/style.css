@@ -136,6 +136,7 @@ button {
 
 .page-content-wrap {
     width: 100vw;
+    padding-right: 40px;
 }
 
 .page-content {
@@ -286,8 +287,15 @@ footer>* {
 .secondary {
     color: var(--lwhite);
 }
-
+.lg-secondary {
+    font-size: 26px;
+    color: var(--lwhite);
+}
 .primary {
+    color: var(--blue-2);
+}
+.lg-primary {
+    font-size: 26px;
     color: var(--blue-2);
 }
 
@@ -331,8 +339,8 @@ footer>* {
     }
 
     .page-content-wrap {
-        width: 60vw;
-        padding-right: 20px;
+        width: 70vw;
+        padding-right: 40px;
     }
 
     .sidebar {
