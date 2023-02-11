@@ -81,6 +81,16 @@ i {
     font-style: italic;
 }
 
+a {
+    color: var(--blue-2);
+}
+a:hover {
+    color: var(--blue-1);
+}
+a:visited {
+    color: var(--blue-3);
+}
+
 /* Wraps the whole page */
 .page-container {
     position: relative;
@@ -106,23 +116,26 @@ i {
     height: 60px;
     box-shadow: inset 1px 6px 9px -6px;
     padding-bottom: 16px;
+    background-color: var(--dark-1);
 }
 
 .header-bar {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+
 }
 
 .menu-collapsible-btn {
     height: 60px;
     width: 60px;
     padding-right: 20px;
+    padding-top: 16px;
+    padding-left: 16px;
 }
 
 .menu-collapsible-btn img {
-    padding: 10px;
-    height: 30px;
+    height: 35px;
 }
 
 .collapsible {
