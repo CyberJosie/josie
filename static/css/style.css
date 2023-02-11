@@ -9,9 +9,10 @@
     --dark-2: #282828;
     --dark-3: #404040;
 
-    --purple-0: #702963;
-    --purple-1: #9F2B68;
-    --purple-2: #AA336A;
+    --blue-1: #2B79C1;
+    --blue-2: #2D4BA3;
+    --blue-3: #2E3293;
+
     --lwhite: #b3b3b3;
 }
 
@@ -26,32 +27,38 @@ html {
 h1 {
     font-family: 'palanquin';
     font-size: 48px;
-    color: var(--purple-0);
+    color: var(--blue-2);
+
 }
 
 h2 {
     font-family: 'palanquin';
     font-size: 42px;
+    color: var(--blue-2);
 }
 
 h3 {
     font-family: 'palanquin';
     font-size: 36px;
+    color: var(--blue-2);
 }
 
 h4 {
     font-family: 'palanquin';
     font-size: 32px;
+    color: var(--blue-2);
 }
 
 h5 {
     font-family: 'palanquin';
     font-size: 28px;
+    color: var(--blue-2);
 }
 
 p {
     font-family: 'palanquin';
     font-size: 20px;
+    color: white;
 }
 
 /* Wraps the whole page */
@@ -65,12 +72,12 @@ p {
  Do not put anything below here besides the footer.
 */
 .content-area-wrap {
-    padding-bottom: 40px;
+    padding-bottom: 150px;
 }
 
 .content-area {
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding-left: 40px; */
+    /* padding-right: 40px; */
 }
 
 .header {
@@ -78,6 +85,7 @@ p {
     width: 100%;
     height: 60px;
     box-shadow: inset 1px 6px 9px -6px;
+    padding-bottom: 16px;
 }
 
 .header-bar {
@@ -128,11 +136,12 @@ p {
 }
 
 .header-bar-btn:hover span {
-    color: var(--lwhite);
+    color: var(--blue-1);
 }
 
 .header-bar-btn:active span {
     font-weight: bold;
+    color: var(--blue-1);
 }
 
 .dropdown-menu {
@@ -141,18 +150,76 @@ p {
     padding-top: 4px;
     min-height: 250px;
     background-color: var(--dark-1);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    border-bottom: solid 1px var(--blue-1);
+
 }
 
+.menu-ctgs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.menu-ctg-wrap {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100%;
+}
+
+.menu-ctg-wrap p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-ctg {}
+
+.menu-link:hover {
+    transition: 0.2s ease-in-out;
+    transform: translateX(4px);
+}
+
+.menu-link:hover a {
+    color: var(--blue-1);
+}
+
+.menu-link:active {
+    transition: none;
+    transform: translateX(0px);
+}
+
+.menu-link:active a {
+    color: var(--blue-0);
+}
+
+.menu-link a {
+    text-decoration: none;
+    font-family: 'palanquin';
+    color: white;
+    font-size: 22px;
+}
 
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 150px;
+    background-color: var(--dark-1);
+}
+
+footer>* {
+    color: var(--lwhite);
 }
 
 .secondary {
     color: var(--lwhite);
+}
+
+.primary {
+    color: var(--blue-2);
 }
 
 .noshow {
@@ -160,8 +227,23 @@ p {
 }
 
 
+.landing-cover {
+    height: 400px;
+    width: 100%;
+    background-color: black;
+}
+
+.page-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 @media only screen and (min-width: 1024px) {
     .header-bar-btn-wrap {
         display: block;
+    }
+
+    .menu-ctg-wrap {
+        flex: 0.5;
     }
 }
