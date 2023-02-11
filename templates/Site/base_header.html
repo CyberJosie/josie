@@ -2,7 +2,7 @@
 <div class="header-top"></div>
 <div class="header">
     <div class="header-bar">
-        <div class="menu-collapsible-btn" onclick="toggle_menu()">
+        <div class="menu-collapsible-btn" onclick="toggle_main_menu()">
             <img src="{% static 'images/menu_icon.png' %}">
         </div>
 
@@ -14,44 +14,34 @@
             </a>
         </div>
 
-        <div class="header-bar-btn-wrap noshow" title="Home">
-            <a href="{% url 'index' %}">
-                <div class="header-bar-btn">
-                    <span>Home</span>
-                </div>
-            </a>
+        <!-- Information about me, my experience, and background/history -->
+        <div class="header-bar-btn-wrap noshow" title="Portfolio" onclick="toggle_learn_menu()">
+            <div class="header-bar-btn">
+                <span>Portfolio</span>
+            </div>
         </div>
-        <div class="header-bar-btn-wrap noshow" title="Services">
-            <a href="{% url 'services' %}">
-                <div class="header-bar-btn">
-                    <span>Services</span>
-                </div>
-            </a>
+        <!-- Pages related to my freelance services -->
+        <div class="header-bar-btn-wrap noshow" title="Services" onclick="toggle_services_menu()">
+            <div class="header-bar-btn">
+                <span>Services</span>
+            </div>
         </div>
-        <div class="header-bar-btn-wrap noshow" title="Projects">
-            <a href="{% url 'projects' %}">
-                <div class="header-bar-btn">
-                    <span>Projects</span>
-                </div>
-            </a>
+        <!-- Blog pages -->
+        <div class="header-bar-btn-wrap noshow" title="Blog" onclick="toggle_blog_menu()">
+            <div class="header-bar-btn">
+                <span>Blog</span>
+            </div>
         </div>
-        <div class="header-bar-btn-wrap noshow" title="About Me">
-            <a href="{% url 'about_me' %}">
-                <div class="header-bar-btn">
-                    <span>About Me</span>
-                </div>
-            </a>
+        <!-- Contact Links -->
+        <div class="header-bar-btn-wrap noshow" title="Contact" onclick="toggle_contact_menu()">
+            <div class="header-bar-btn">
+                <span>Contact</span>
+            </div>
         </div>
-        <div class="header-bar-btn-wrap noshow" title="Contact">
-            <a href="{% url 'contact' %}">
-                <div class="header-bar-btn">
-                    <span>Contact</span>
-                </div>
-            </a>
-        </div>
+
     </div>
 </div>
-<div class="dropdown-menu collap-content" id="dropdown-menu">
+<div class="dropdown-menu collap-content" id="main-dropdown-menu">
     <div class="menu-ctgs">
         <div class="menu-ctg-wrap">
             <p class="primary">Pages</p>
@@ -103,8 +93,128 @@
                     GitHub
                 </a>
             </div>
+            <div class="menu-link">
+                <a href="" title="Email">
+                    Email
+                </a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Online">
+                    Online
+                </a>
+            </div>
 
         </div>
     </div>
 
+</div>
+
+<div class="dropdown-menu collap-content" id="learn-dropdown-menu">
+    <h2>Portfolio</h2>
+    <div class="menu-ctgs">
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Overview">Overview</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Introduction">Introduction</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Experience">Experience</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Education">Education</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Skills">Skills</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Technologies">Technologies</a>
+            </div>
+            
+        </div>
+
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Project Showcase">Project Showcase</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Testimonials">Testimonials</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Request Access">Request Access</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Redeem Access">Redeem Access</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="dropdown-menu collap-content" id="services-dropdown-menu">
+    <h2>Services</h2>
+    <div class="menu-ctgs">
+    </div>
+</div>
+<div class="dropdown-menu collap-content" id="blog-dropdown-menu">
+    <h2>Blog</h2>
+    <div class="menu-ctgs">
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Explore">Explore</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Latest">Latest</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Popular">Popular</a>
+            </div>
+        </div>
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Search">Search</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Search">RSS</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Search">Why do I blog?</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dropdown-menu collap-content" id="contact-dropdown-menu">
+    <h2>Contact</h2>
+    <div class="menu-ctgs">
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Fiverr">
+                    Fiverr
+                </a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="LinkedIn">
+                    LinkedIn
+                </a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="GitHub">
+                    GitHub
+                </a>
+            </div>
+            
+        </div>
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Email">
+                    Email
+                </a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Online">
+                    Online Form
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

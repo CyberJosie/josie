@@ -84,12 +84,15 @@ i {
 a {
     color: var(--blue-2);
 }
+
 a:hover {
     color: var(--blue-1);
 }
+
 a:visited {
     color: var(--blue-3);
 }
+
 input {
     width: 100%;
     border-radius: none;
@@ -139,9 +142,8 @@ button {
     padding-right: 40px;
 }
 
-.page-content {
+.page-content {}
 
-}
 .sidebar {
     width: 100vw;
 }
@@ -219,10 +221,11 @@ button {
     padding-top: 4px;
     min-height: 250px;
     background-color: var(--dark-1);
-    z-index: 10;
-    position: fixed;
+    /* z-index: 10; */
+    /* position: fixed; */
     width: 100%;
     border-bottom: solid 1px var(--blue-1);
+    /* height: 100%; */
 
 }
 
@@ -287,13 +290,16 @@ footer>* {
 .secondary {
     color: var(--lwhite);
 }
+
 .lg-secondary {
     font-size: 26px;
     color: var(--lwhite);
 }
+
 .primary {
     color: var(--blue-2);
 }
+
 .lg-primary {
     font-size: 26px;
     color: var(--blue-2);
@@ -306,9 +312,11 @@ footer>* {
 .spacer {
     padding-top: 20px;
 }
+
 .lg-spacer {
     padding-top: 40px;
 }
+
 .separator {
     border-bottom: 1px solid var(--blue-1);
     width: 100%;
