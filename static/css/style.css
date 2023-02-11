@@ -3,6 +3,21 @@
     src: url('/static/fonts/palanquin-regular.ttf');
 }
 
+@font-face {
+    font-family: 'palanquin-bold';
+    src: url('/static/fonts/palanquin-bold.ttf');
+}
+
+@font-face {
+    font-family: 'palanquin-light';
+    src: url('/static/fonts/palanquin-light.ttf');
+}
+
+@font-face {
+    font-family: 'palanquin-semibold';
+    src: url('/static/fonts/palanquin-semibold.ttf');
+}
+
 :root {
     --dark-0: #121212;
     --dark-1: #181818;
@@ -39,26 +54,31 @@ h2 {
 
 h3 {
     font-family: 'palanquin';
-    font-size: 36px;
+    font-size: 32px;
     color: var(--blue-2);
 }
 
 h4 {
     font-family: 'palanquin';
-    font-size: 32px;
+    font-size: 28px;
     color: var(--blue-2);
 }
 
 h5 {
     font-family: 'palanquin';
-    font-size: 28px;
+    font-size: 24px;
     color: var(--blue-2);
 }
 
 p {
     font-family: 'palanquin';
-    font-size: 20px;
-    color: white;
+    font-size: 22px;
+    color: var(--lwhite);
+}
+
+i {
+    font-family: 'palanquin-light';
+    font-style: italic;
 }
 
 /* Wraps the whole page */
@@ -206,8 +226,9 @@ p {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 150px;
+    height: 100px;
     background-color: var(--dark-1);
+    border-top: 1px solid var(--blue-1)
 }
 
 footer>* {
