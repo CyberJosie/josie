@@ -35,13 +35,6 @@ def projects(request):
     ctx['page_title'] = '{} | {}'.format(ctx['page_heading'], SITE_NAME)
     return render(request, 'Site/projects.html', context=ctx)
 
-def about_me(request):
-    ctx = {}
-    if 'django_timezone' in request.session:
-        ctx['date'], ctx['time'] = make_datetime(request.session['django_timezone'])
-        ctx['page_heading'] = 'About Me'
-    ctx['page_title'] = '{} | {}'.format(ctx['page_heading'], SITE_NAME)
-    return render(request, 'Site/about_me.html', context=ctx)
 
 def contact(request):
     ctx = {}

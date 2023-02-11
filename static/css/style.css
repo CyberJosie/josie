@@ -220,13 +220,13 @@ button {
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 4px;
-    min-height: 250px;
-    background-color: var(--dark-1);
-    /* z-index: 10; */
-    /* position: fixed; */
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 15%, rgba(0,0,0,0.5) 84%); 
+    z-index: 10;
+    position: fixed;
     width: 100%;
     border-bottom: solid 1px var(--blue-1);
-    /* height: 100%; */
+    height: 100%;
 
 }
 
