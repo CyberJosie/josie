@@ -13,7 +13,12 @@
 
     <div class="page-container">
         <!-- Site Header -->
+        {% if request.user.is_authenticated %}
+        {% include 'Panel/base_header.html' %}
+        {% else %}
         {% include 'Site/base_header.html' %}
+        {% endif %}
+        
 
         <!-- Page Header -->
         <div class="heading-parallax">
@@ -35,7 +40,12 @@
 
                 <!-- Right Sidebar -->
                 <div class="sidebar left-sidebar">
+                    {% if request.user.is_authenticated %}
+                    {% include 'Panel/base_left_sidebar.html' %}
+                    {% else %}
                     {% include 'Site/base_left_sidebar.html' %}
+                    {% endif %}
+                    
                 </div>
 
                 <!--Page Content -->
@@ -46,10 +56,16 @@
                     </div>
                 </div>
 
+                
+                {% if request.user.is_authenticated %}
+                <!-- Authenticated users do not get right sidepanel. -->
+                {% else %}
                 <!-- Right Sidebar -->
                 <div class="sidebar">
                     {% include 'Site/base_sidebar.html' %}
                 </div>
+                {% endif %}
+                
 
             </div>
         </div>
@@ -87,9 +103,6 @@
             }));
     }
 
-    // Get the set timezone if there is any
-    let stz = "{{request.session.django_timezone}}";
-
     // If this variable doesnt exist the user has just landed
     if (localStorage.getItem("second_visit_and_on") === null) {
         console.log("This user just landed");
@@ -101,11 +114,6 @@
         // has already visited at least 1 page.
         localStorage.setItem("second_visit_and_on", 1);
     } else {
-        // If the user has been here before, but
-        // still does not have a set timezone, set timezone.
-        if (stz === "") {
-            set_timezone();
-        }
         // If the variable exists, dont run first-time code. We 
         // let the value persist so these functions are not ran again.
         console.log("This user has already been to one or more pages.");

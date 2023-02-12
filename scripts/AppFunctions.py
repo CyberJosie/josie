@@ -14,17 +14,26 @@ from django.http import request
 
 
 class AccessLevel():
-    def __init__(self, label: str, level: int) -> None:
-        setattr(self, label, level)
+    def __init__(self, level: str) -> None:
+        self.level = level
     
-    def is_admin() -> bool:
-        return True if self.admin is not None else False
+    def is_admin(self) -> bool:
+        if self.level == 'admin':
+            return True
+        else:
+            return False
     
-    def is_guest() -> bool:
-        return True if self.guest is not None else False
+    def is_guest(self) -> bool:
+        if self.level == 'guest':
+            return True
+        else:
+            return False
     
-    def is_staff() -> bool:
-        return True if self.staff is not None else False
+    def is_staff(self) -> bool:
+        if self.level == 'staff':
+            return True
+        else:
+            return False
     
 
 def read_key(keydir: str, name: str) -> Union[str,None]:
@@ -53,9 +62,9 @@ def user_access_level(request: request) -> AccessLevel:
     result = None
     if request.user.is_authenticated:
         if request.user.is_staff:
-            result = AccessLevel('staff', 1)
+            result = AccessLevel('staff')
         elif request.user.is_superuser:
-            result = AccessLevel('admin', 2)
+            result = AccessLevel('admin')
     else:
-        result = AccessLevel('guest', 0)
+        result = AccessLevel('guest')
     return result

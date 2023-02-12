@@ -10,6 +10,8 @@ def set_timezone(request):
         jdata = json.loads(request.body)
         request.session['django_timezone'] = jdata['timezone']
         return redirect('/')
+    else:
+        return redirect('/')
 
 def index(request):
     ctx = {}

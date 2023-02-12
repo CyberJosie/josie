@@ -1,0 +1,164 @@
+{% load static %}
+<div class="header-top"></div>
+<div class="header">
+    <div class="header-bar">
+        <div class="menu-collapsible-btn" onclick="toggle_main_menu()">
+            <img src="{% static 'images/menu_icon.png' %}">
+        </div>
+
+        <div class="header-bar-btn-wrap">
+            <a href="/">
+                <div class="header-bar-btn">
+                    <img src="{% static 'images/techjosie_icon.png' %}" width="40px">
+                </div>
+            </a>
+        </div>
+        <!-- <div class="header-bar-btn-wrap noshow" title="Dashboard">
+            <a href="{% url 'dashboard' %}">
+                <div class="header-bar-btn">
+                    <span>Dashboard</span>
+                </div>
+            </a>
+        </div> -->
+        <div class="header-bar-btn-wrap noshow" style="margin-left: auto;" title="Log Out">
+            <a href="{% url 'log_out' %}">
+                <div class="header-bar-btn">
+                    <span>Log Out</span>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+</div>
+<div class="dropdown-menu collap-content" id="main-dropdown-menu">
+    <div class="menu-ctgs">
+        <div class="menu-ctg-wrap">
+            <p class="primary">Navigation</p>
+            {% include 'Panel/panel_links.html' %}
+        </div>
+
+    </div>
+
+</div>
+
+<div class="dropdown-menu collap-content" id="learn-dropdown-menu">
+    <h2>Portfolio</h2>
+    <div class="menu-ctgs">
+        <div class="menu-ctg-wrap">
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="{% url 'portfolio' %}" title="Overview">Overview</a>
+            </div>
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="/portfolio/#introduction" title="Introduction">Introduction</a>
+            </div>
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="/portfolio/#experience" title="Experience">Experience</a>
+            </div>
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="/portfolio/#education" title="Education">Education</a>
+            </div>
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="/portfolio/#skills" title="Skills">Skills</a>
+            </div>
+
+        </div>
+
+        <div class="menu-ctg-wrap">
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="/portfolio/#technologies" title="Technologies">Technologies</a>
+            </div>
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="" title="Project Showcase">Project Showcase</a>
+            </div>
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="" title="Testimonials">Testimonials</a>
+            </div>
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="" title="Request Access">Request Access</a>
+            </div>
+            <div class="menu-link" onclick="close_learn_menu()">
+                <a href="" title="Redeem Access">Redeem Access</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="dropdown-menu collap-content" id="services-dropdown-menu">
+    <h2>Services</h2>
+    <div class="menu-ctgs">
+        <div class="menu-ctg-wrap">
+            <div class="menu-link" onclick="close_services_menu()">
+                <a href="{% url 'services' %}" title="Browse All">Browse All</a>
+            </div>
+            <div class="menu-link" onclick="close_services_menu()">
+                <a href="/services/#web-development" title="Web Development">Web Development</a>
+            </div>
+            <div class="menu-link" onclick="close_services_menu()">
+                <a href="/services/#python-scripting" title="Python Scripting">Python Scripting</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dropdown-menu collap-content" id="blog-dropdown-menu">
+    <h2>Blog</h2>
+    <div class="menu-ctgs">
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Explore">Explore</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Latest">Latest</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Popular">Popular</a>
+            </div>
+        </div>
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Search">Search</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Search">RSS</a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Search">Why do I blog?</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dropdown-menu collap-content" id="contact-dropdown-menu">
+    <h2>Contact</h2>
+    <div class="menu-ctgs">
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Fiverr">
+                    Fiverr
+                </a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="LinkedIn">
+                    LinkedIn
+                </a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="GitHub">
+                    GitHub
+                </a>
+            </div>
+
+        </div>
+        <div class="menu-ctg-wrap">
+            <div class="menu-link">
+                <a href="" title="Email">
+                    Email
+                </a>
+            </div>
+            <div class="menu-link">
+                <a href="" title="Online">
+                    Online Form
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

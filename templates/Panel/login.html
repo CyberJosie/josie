@@ -1,0 +1,54 @@
+{% extends 'Panel/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <title>
+        {{page_title}}
+    </title>
+</head>
+<div class="page-padding">
+    <div class="content-block" style="min-height: 200px">
+        {% if error_message %}
+        <div class="error-message">
+            {{error_message}}
+        </div>
+        <div class="spacer"></div>
+        {% elif info_message %}
+        <div class="info-message">
+            {{info_message}}
+        </div>
+        <div class="spacer"></div>
+        {% endif %}
+        <form method="POST" action="/panel/login/">
+            {%csrf_token%}
+            <div class="keyvalue-flex">
+                <div class="key">
+                    <label for="username">Username</label>
+                </div>
+                <div class="value">
+                    <input name="username" type="text" id="username">
+                </div>
+            </div>
+            <div class="keyvalue-flex">
+                <div class="key">
+                    <label for="password">Password</label>
+                </div>
+                <div class="value">
+                    <input name="password" type="password" id="password">
+                </div>
+            </div>
+            <div class="keyvalue-flex">
+                <div class="key">
+                    
+                </div>
+                <div class="value">
+                    <button type="submit">
+                        Log In
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}
